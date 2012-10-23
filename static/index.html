@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
@@ -35,23 +35,21 @@
 	<a target="_blank" href="http://golang.org/">Go programlama dili</a>
 	Turuna Hoş Geldiniz.
 	<p>
-	Tur 3 bölümden oluşmakta. Her bölümün sonunda bir dizi
+	Turumuz 3 bölümden oluşmaktadır ve her bölümün sonunda bir dizi
 	alıştırma tamamlamanızı bekliyor.
 	<p>
-	Tur interaktif. Şimdi "Run" butonuna basın (ya da
-	Shift-Enter tuşlayın) kod derlenip program çalıştırılacak.
+	Turumuz interaktiftir. Programı uzak server üzerinde derleyip, çalıştımak için "Run"   butonuna basın (ya da Shift + Enter tuşlarına basın).
 	<span class="appengineMode">bir uzak sunucu.</span>
 	<span class="localMode">sizin bilgisayarınız.</span>
 	Sonuç kodun aşağısında gösterilecek.
 	<p>
-	Örnek programlar sizi Go'nun farklı yönleriyle tanıştıracak.
-	Bu programlar sizin gelecekteki tecrübeleriniz için ilk adımları
-	oluşturacak.
+	Örnek programlar sizi Go'nun farklı yönleriyle tanıştırarak,
+	gelecekteki tecrübeleriniz için ilk adımları  oluşturacak.
 	<p>
 	Programı düzenleyip yeniden çalıştırın.
 	<p>
 	İlerlemeye hazır olduğunuzda "Next" butonuna tıklayın ya da
-	PageDown tuşlayın.
+	Page Down tuşuna basın.
 <pre class="source">package main
 
 import "fmt"
@@ -82,12 +80,12 @@ func main() {
 <div class="slide nocode appengineMode">
 	<h2>Go çevrimdışı</h2>
 	<p>
-	Bu tur aynı zamanda internet bağlantısı olmadan da kullanabileceğiniz
-	tek başına çalıştırılabilir bir program.
+	Aynı zamanda bu turun internet bağlantısı olmadan da kullanabileceğiniz
+	tek başına çalıştırılabilir bir versiyonu mevcuttur.
 	<p>
-	Bu tur daha hızlı, kod parçalarını sizin bilgisayarınızda yaratıp
-	çalıştıracak. Aynı zamanda diğer versiyonda yer almayan bir kaç
-	alıştırma da içeriyor.
+	Kendi başına çalıştırılabilir tur, kod parçalarını sizin bilgisayarınızda yaratıp
+	çalıştıracağından daha hızlıdır. Aynı zamanda diğer versiyonda yer almayan bir kaç
+	alıştırma da içermektedir.
 	<p>
 	Turu lokal olarak çalıştırmak için önce
 	<a target="_blank" href="http://golang.org/doc/install/">Go yükleyin</a>,
@@ -98,7 +96,7 @@ func main() {
 	<p>
 	ve <code>gotour</code>'u çalıştırın.
 	<p>
-	Ya da, devam etmek için "Next" butonuna tıklayın veya Page Down tuşlayın.
+	Ya da, devam etmek için "Next" butonuna tıklayın veya Page Down tuşuna basın.
 	<p>
 	<i>(Bu bilgilere dilediğiniz zaman ulaşmak için "index" butonunu
 	kullanabilirsiniz.)</i>
@@ -111,10 +109,10 @@ func main() {
 	<p>
 	Her Go programı paketlerden oluşur.
 	<p>
-	Programlar <code>main</code> paketi ile birlikte başlar.
+	Programlar <code>main</code> paketinde çalışmaya başlar.
 	<p>
-	Bu program paketleri <code>"fmt"</code> ve <code>"math"</code>
-	import yolları ile kullanılır.
+	Bu örnek program <code>"fmt"</code> ve <code>"math"</code> paketlerini import yolu
+	ile kullanıyor.
 	<p>
 	Geleneksel olarak, paket isimleri import yolunun son
 	elementi ile isimlendirilir.
@@ -154,15 +152,15 @@ func main() {
 <div class="slide">
 	<h2>İçe Aktarılan isimler</h2>
 	<p>
-	Bir paketi içe aktardıktan sonra, isimleri aktarabilirsiniz.
+	Bir paketi içe aktardıktan sonra, sahip olduğu isimleri refere edebilirsiniz.
 	<p>
-	Go'da, bir isim büyük harf ile başlıyorsa içe aktarılmıştır.
+	Go'da, dışa aktarılmış bir isim büyük harf ile başlar.
 	<p>
-	<code>Foo</code> içe aktarılmış bir isim, tıpkı <code>FOO</code> gibi.
-	<code>foo</code> ismi içe aktarılmamış.
+	Tıpkı <code>FOO</code> gibi <code>Foo</code> dışa aktarılmış bir isimdir.
+	<code>foo</code> dışa aktarılmış bir isim değildir.
 	<p>
-	Kodu çalıştırın. Daha sonra <code>math.pi</code>'ye <code>math.Pi</code>
-	ismini verip yeniden çalıştırın.
+	Kodu çalıştırmayı denedikten sonra <code>math.pi</code> ifadesini <code>math.Pi</code> 
+	Şeklinde değiştirdikten sonra yeniden çalıştırın.
 <pre class="source">package main
 
 import (
@@ -182,9 +180,9 @@ func main() {
 	<p>
 	Bu örnekte, <code>add</code> fonksiyonu <code>int</code> türünde 2 parametre alıyor.
 	<p>
-	Aklınızda bulunsun tür adı değişken adından <i>sonra</i> geliyor.
+	Tür tanımlamasının değişken adından <i>sonra</i> yapıldığına dikkat edin!
 	<p>
-	(Türlerin neden buna ihtiyaç duydukları hakkında daha fazla bilgi için, <a target="_blank" href="http://golang.org/doc/articles/gos_declaration_syntax.html"> buraya</a> bakın makale Go'nun "syntax ifadesi"ndendir.)
+	(Tür tanımlamaları hakkında daha fazla bilgi için, <a target="_blank" href="http://golang.org/doc/articles/gos_declaration_syntax.html"> buraya</a> bakın makale Go'nun "syntax ifadesi"ndendir.)
 <pre class="source">package main
 
 import "fmt"
@@ -201,13 +199,13 @@ func main() {
 <div class="slide">
 	<h2>Fonksiyonlar</h2>
 	<p>
-	Ardışık gelen 2 ya da daha fazla parametre bir türü paylaşıyorsa,
-	tür adını en sona yazarak paylaştırabilirsiniz.
+	Ardışık gelen 2 ya da daha fazla parametre aynı türü paylaşıyorsa,
+	tür adını en sona yazarak tanımlama yapabiliriz.
 	<p>
 	Bu örnekte,
 	<pre>x int, y int</pre>
 	<p>
-	kod parçasını şuna kısalttık
+	kod parçası aşağıdaki şekilde kısaltılmış;
 	<pre>x, y int</pre>
 <pre class="source">package main
 
@@ -227,7 +225,7 @@ func main() {
 	<p>
 	Bir fonksiyon herhangi bir sayıda sonuç döndürebilir.
 	<p>
-	Bu fonksiyon 2 dizgi döndürüyor.
+	Örnekteki fonksiyon dizgi türünde 2 sonuç döndürüyor.
 <pre class="source">package main
 
 import "fmt"
@@ -246,8 +244,8 @@ func main() {
 	<h2>Fonksiyonlar</h2>
 	<p>
 	Fonksiyonlar parametreler alırlar. Go'da fonksiyonlar birden fazla
-	sonuç parametresi alabilirler. Onlar da değişken gibi isimlendirilebilir
-	ve öyle davranabilirler.
+	sonuç parametresi alabilir. sonuç da değişken gibi isimlendirilebilir
+	ve davranırlar.
 	<p>
 	Eğer sonuç parametreleri isimlendirilmişse, argümansız bir <code>return</code>
 	 ifadesi sonuçların geçerli değerini döndürecektir.
@@ -269,8 +267,8 @@ func main() {
 <div class="slide">
 	<h2>Değişkenler</h2>
 	<p>
-	<code>var</code> ifadesi değişkenleri listeler;
-	tıpkı fonksiyon argümanları gibi, tür en sonda.
+	<code>var</code> ifadesi değişken listesi deklare eder;
+	tıpkı fonksiyon argümanları gibi, tür tanımlaması sonda yapılır.
 
 <pre class="source">package main
 
@@ -287,10 +285,10 @@ func main() {
 <div class="slide">
 	<h2>Değişkenler</h2>
 	<p>
-	Bir var ifadesi tanımlayıcı içerebilir, her değişkene bir tane.
+	Bir var deklarasyonu her değişken için bir ilklendirme değeri içerebilir.
 	<p>
-	Eğer bir tanımlayıcı mevcut ise, tür atlanabilir;
-	değişken tanımlayıcısının türünü alacaktır.
+	Eğer bir ilklendirme mevcut ise, tür tanımlaması atlanabilir;
+	değişken ilklendirme değerinin türünü alacaktır.
 <pre class="source">package main
 
 import "fmt"
@@ -306,11 +304,10 @@ func main() {
 <div class="slide">
 	<h2>Değişkenler</h2>
 	<p>
-	Bir fonksiyondaki, <code>:=</code> kısa atama ifadesi
-	 <code>var</code> ifadesinin yerine kullanılabilir .
+	Bir fonksiyon içerisinde, <code>var</code> ifadesinin yerine <code>:=</code> kısa atama ifadesi kullanılabilir .
 	<p>
 	(Fonksiyonun dışında, her yapı bir anahtar kelime ile başlar ve
-	<code>:=</code> yapısı mümkün değildir.)
+	<code>:=</code> yapısını kullanmak mümkün değildir.)
 <pre class="source">package main
 
 import "fmt"
@@ -326,10 +323,10 @@ func main() {
 <div class="slide">
 	<h2>Sabitler</h2>
 	<p>
-	Sabitler de değişkenler gibidir ama <code>const</code> anahtar kelimesi
-	ile kullanılırlar.
+	Sabitler de değişkenler benzer şekilde ancak <code>const</code> anahtar kelimesi
+	ile deklare edilir.
 	<p>
-	Sabitler, karakter, dizgi, boolean, ya da sayısal değerler alabilirler.
+	Sabitler, karakter, dizgi, boolean, ya da sayısal değerler alabilir.
 <pre class="source">package main
 
 import "fmt"
@@ -378,11 +375,11 @@ func main() {
 <div class="slide">
 	<h2>For</h2>
 	<p>
-	Go sadece bir döngü yapısına sahip, <code>for</code> döngüsü.
+	Go dilinde tek bir döngü yapısı mevcuttur; <code>for</code> döngüsü.
 	<p>
-	<code>for</code> döngüsü C ya da Java'dakiyle aynı gibi,
-	yalnızca <code>( )</code> kısmı gitti (opsiyonal bile değiller)
-	ve <code>{ }</code> kısmı gerekli. 
+	<code>for</code> döngüsü C ya da Java'dakiyle benzer yapıdadır,
+	ancak <code>( )</code> kısmı (parantezler) kullanılmaz (opsiyonal değil)
+	bunun yanında <code>{ }</code> kısmının kullanılması şarttır. 
 <pre class="source">package main
 
 import "fmt"
@@ -416,7 +413,7 @@ func main() {
 <div class="slide">
 	<h2>For</h2>
 	<p>
-	Bu noktada, noktalı virgülleri bırakabilirsiniz:
+	Bu durumda, noktalı virgülleri kullanmayabilirsiniz:
 	C'nin <code>while</code>'ı Go'da <code>for</code> diye okunur.
 <pre class="source">package main
 
@@ -434,7 +431,7 @@ func main() {
 <div class="slide">
 	<h2>For</h2>
 	<p>
-	Eğer döngü koşulunu atlarsanız, sonsuz döngüye girer.
+	Eğer döngü koşulunu belirtmazseniz, sonsuz döngü oluşacaktır .
 <pre class="source">package main
 
 func main() {
@@ -446,8 +443,8 @@ func main() {
 <div class="slide">
 	<h2>For</h2>
 	<p>
-	Ve tüm cümlecikleri çıkararak, noktalı virgülleri atlayabilir,
-	yani sonsuz döngüyü kısaltabiliriz.
+	Hiçbir şart ve noktalı virgül kullanmayarak,
+	kolaylıkla sonsuz bir döngü kurabilliriz.
 <pre class="source">package main
 
 func main() {
@@ -459,8 +456,8 @@ func main() {
 <div class="slide">
 	<h2>If</h2>
 	<p>
-	<code>if</code> döngüsü C ya da Java'dakiyle aynı gibi,
-	yalnızca <code>( )</code> kısmı gitti (opsiyonal bile değiller)
+	<code>if</code> koşulu C ya da Java'dakiyle benzer yapıdadır,
+	yalnızca <code>( )</code> kısmı (parantezler) gitti (opsiyonal değil)
 	ve <code>{ }</code> kısmı gerekli.
 	<p>
 	(Tanıdık geldi değil mi?)
@@ -587,7 +584,7 @@ func main() {
 <div class="slide">
 	<h2>Yapılar</h2>
 	<p>
-	Bir <code>struct</code> (yapı) alanların toplamasıdır.
+	Bir <code>struct</code> (yapı) alanların toplamasıdır. /* bu çevirinin doğruluğu hakkında şüphem var ancak herhangi öneri getiremiyorum */
 	<p>
 	(Ve bir <code>type</code> ifadesi bekleneni gerçekleştirir.)
 <pre class="source">package main
@@ -649,7 +646,7 @@ func main() {
 </div>
 
 <div class="slide">
-	<h2>Yapısal Sabitler</h2>
+	<h2>Yapısal Sabitler</h2> /* bu slaytın çevirisi hakkında şüphelerim var ancak henüz düzgün bir öneri getiremiyorum */ 
 	<p>
 	Yapısal sabitler henüz tahsis edilmiş yapı değerini alanına göre listeleyerek belirtir.
 	<p>
@@ -709,7 +706,7 @@ func main() {
 	<p>
 	<!-- TODO: empty part not true in compilers yet -->
 	Eşlemler mutlaka <code>make</code> ile yaratılmalıdır (<code>new</code> ile değil)
-	kullanmadan önce;<code>nil</code> eşlemi boştur ve atanabilir değildir.
+	<code>nil</code> türüdeki bir eşlem boştur ve atanabilir değildir.
 <pre class="source">package main
 
 import "fmt"
@@ -732,7 +729,7 @@ func main() {
 <div class="slide">
 	<h2>Eşlemler</h2>
 	<p>
-	Eşlem değişmezleri de yapı değişmezleri gibidir ama anahtarlar gereklidir.
+	Eşlem değişmezleri de yapı değişmezlerine benzer yapıdadır ancak anahtarlarla birlikte kullanılır.
 <pre class="source">package main
 
 import "fmt"
@@ -759,7 +756,7 @@ func main() {
 	<h2>Eşlemler</h2>
 	<p>
 	Eğer üst-seviye tür yalnızca tür adı ise, onu değişmezin elemanları
-	arasında görmezden gelebilirsiniz.
+	arasında görmezden gelebilirsiniz. /*kendime not daha uygun bir çeviri ara */
 <pre class="source">package main
 
 import "fmt"
@@ -781,7 +778,7 @@ func main() {
 <div class="slide">
 	<h2>Eşlemleri Değiştirme</h2>
 	<p>
-	Eşlemimize("map") bir eleman ekleyelim ya da güncelleyelim <code>m</code>:
+	Eşlemimize("map") bir eleman ekleyelim ya da ver olan bir elemanı güncelleyelim <code>m</code>:
 	<pre>m[key] = elem</pre>
 	<p>
 	Bir elemanı çekelim:
@@ -794,12 +791,12 @@ func main() {
 	<pre>elem, ok = m[key]</pre>
 	<p>
 	Eğer <code>key</code>, <code>m</code> içindeyse,
-	<code>ok</code> <code>true</code> olacaktır.
-	Eğer değilse, <code>ok</code>  <code>false</code> ve
-	<code>elem</code> eşlemin eleman türü için sıfır değerini alacaktır.
+	<code>ok</code>, <code>true</code> değerini alacaktır.
+	Eğer değilse, <code>ok</code>,  <code>false</code> değerini alacak ve
+	<code>elem</code>, eşlemin eleman türü için sıfır değerini alacaktır.
 	<p>
 	Benzer şekilde, bir eşlemden okurken eğer anahtar mevcut değilse
-	sonuç eşlemin eleman türü için sıfır değerini alır.
+	Sonuç, eşlemin eleman türü için sıfır değerini alır.
 <pre class="source">package main
 
 import "fmt"
@@ -824,7 +821,7 @@ func main() {
 <div class="slide">
 	<h2>Dilimler</h2>
 	<p>
-	Değerlerden oluşan bir diziyi ya da uzunluğu belirtir.
+	Bir dilim değerlerden oluşan bir diziyi işaret etmesinin yanında uzunluğunu da belirtir.
 	<p>
 	<code>[]T</code>, <code>T</code> türünden elemanları olan bir dilimdir.
 <pre class="source">package main
@@ -845,19 +842,18 @@ func main() {
 <div class="slide">
 	<h2>Dilimler</h2>
 	<p>
-	!Dilimler yeniden kesilebilir, aynı diziyi işaret eden yeni bir
-	dilim yaratalım.
+	Bir dilim, aynı diziyi işaret eden yeni bir dilim değeri oluşturmak için yeniden dilimlenebilir.
 	<p>
 	<pre>s[lo:hi]</pre>
 	<p>
-	İfadesi "<code>lo</code>"dan "<code>hi-1</code>"i de kapsayan elemanları 
-	değerlendirir. Böylece
+	ifadesi "<code>lo</code>"dan "<code>hi-1</code>"i de kapsayan elemanları 
+	değerlendirir. Buna göre
 	<pre>s[lo:lo]</pre>
 	<p>
-	boştur ve
+	dilimi boştur,
 	<pre>s[lo:lo+1]</pre>
 	<p>
-	bir elemana sahiptir.
+	dilimi ise bir elemana sahiptir.
 <pre class="source">package main
 
 import "fmt"
@@ -878,16 +874,16 @@ func main() {
 <div class="slide">
 	<h2>Dilimler</h2>
 	<p>
-	Dilimler <code>make</code> fonkisiyonu ile yaratılır. Sıfırlanmış bir dizi
-	tahsis ederek ve bu diziye kaynak olacak bir dilim döndürerek çalışır:
+	Dilimler <code>make</code> fonksiyonu ile yaratılır.Çalışma mantığı; bellekte sıfırlanmış bir dizi
+	tahsis ederek ve bu diziyi işaret eden bir dilim döndürmektir:
 	<pre>a := make([]int, 5)  // len(a)=5</pre>
 	Dilimlerin uzunlukları ve kapasiteleri vardır. Bir dilimin kapasitesi ulaşabildiği
 	maksimum uzunluktur dilim temel aldığı dizi içinde büyüyebilir.
 	<p>
-	Kapasiteyi daha açık belirtmek için, <code>make</code>'e bir üçüncü argüman atayalım:
+	Kapasiteyi belirtmek için, <code>make</code>'e bir üçüncü argüman atanır:
 	<p>
 	<pre>b := make([]int, 0, 5) // len(b)=0, cap(b)=5</pre>
-	Dilimler "yeniden-dilimlendirilerek" büyüyebilirler (kapasitelerini artırmak adına):
+	Dilimler (kapasitelerini arttırmak adına) "yeniden-dilimlendirilerek" büyüyebilirler:
 	<p>
 	<pre>b = b[:cap(b)] // len(b)=5, cap(b)=5
 b = b[1:]      // len(b)=4, cap(b)=4</pre>
@@ -915,9 +911,9 @@ func printSlice(s string, x []int) {
 <div class="slide">
 	<h2>Dilimler</h2>
 	<p>
-	Bir dilimin "sıfır" değeri <code>nil</code>'dir.
+	Boş bir dilimin değeri <code>nil</code>'dir.
 	<p>
-	Bu dilimin uzunluğu ve kapasite değeri 0'dır.
+	Böyle dilimlerin uzunluk ve kapasite değerleri 0'dır.
 	<p>
 	(Dilimler hakkında daha fazla bilgi için:
 	"<a target="_blank" href="http://golang.org/doc/articles/slices_usage_and_internals.html">Dilimler: kullanımı ve iç bilgisi</a>"
@@ -958,10 +954,10 @@ func main() {
 <div class="slide">
 	<h2>Fonksiyonlar</h2>
 	<p>
-	Fonksiyonlar kaplamlarla ("closure") doludur.
+	Fonksiyonlar birer ("closure") referanstır. 
 	<p>
-	<code>adder</code> fonksiyonu bir kaplam döndürür.
-	Her kaplam kendi <code>sum</code> değişkenini saklar.
+	<code>adder</code> fonksiyon bir referans döndürür.
+	Her referans kendi <code>sum</code> değişkenini saklar.
 <pre class="source">package main
 
 import "fmt"
@@ -989,7 +985,7 @@ func main() {
 	<h2>Erim</h2>
 	<p>
 	<code>for</code> döngüsünün <code>range</code> formu
-	bir dilim veya eşlem üzerinde dolaşır.
+	ile bir dilim veya eşlem üzerinde dolaşılır.
 <pre class="source">package main
 
 import "fmt"
@@ -1006,10 +1002,10 @@ func main() {
 <div class="slide">
 	<h2>Erim</h2>
 	<p>
-	İndisi ya da değeri <code>_</code> ataması ile geçebilirsiniz.
+	İndisi ya da değeri <code>_</code> ataması ile atlayabilirsiniz.
 	<p>
-	Eğer yalnızca indisi istiyorsanız, &ldquo;<code>, değeri</code>&rdquo;
-	tamamen çıkarın.
+	Eğer yalnızca indisi istiyorsanız, &ldquo;<code>, value</code>&rdquo;
+	ifadesini tamamen çıkarabilirsiniz.
 <pre class="source">package main
 
 import "fmt"
@@ -1028,9 +1024,9 @@ func main() {
 <div class="slide">
 	<h2>Anahtarlama</h2>
 	<p>
-	Muhtemelen "<code>switch</code>"in neye benzediği hakkında biraz bilginiz vardır.
+	Muhtemelen "<code>switch</code>" yapısının ne şekilde çalıştığı hakkında biraz bilginiz vardır.
 	<p>
-	Örneğin gövde kendiliğinden bozulduysa; "<code>fallthrough</code> durumu" ile bitmemesi kaydıyla.
+	"<code>fallthrough</code> durumu" oluşmaması halinde, uygun case gövdesi çalışacaktır . /* çevirimin uygunluğu hakkında şüphelerim var */
 
 <pre class="source">package main
 
@@ -1058,7 +1054,7 @@ func main() {
 	<h2>Anahtarlama</h2>
 	<p>
 	"Switch",  "case"lerini baştan aşağı değerlendirir, "case"lerden biri
-	doğrulanırsa durur.
+	doğrulanırsa değerlendirme işlemi durur.
 	<p>
 	(Örneğin,
 	<pre>switch i {
@@ -1094,9 +1090,9 @@ func main() {
 <div class="slide">
 	<h2>Anahtarlama</h2>
 	<p>
-	Koşulsuz "switch" ifadeleri ile "<code>switch true</code>" aynı şeydir.
+	Koşul belirtilmemiş bir "switch" ifadesi "<code>switch true</code>" ifadesi ile aynı işlevi görür.
 	<p>
-	Bu kavram uzun "if-then-else" zincirleri yerine kullanılabilecek temiz bir yoldur.
+	Ve uzun "if-then-else" zincirleri yerine kullanılabilecek, güzel bir yöntemdir.
 <pre class="source">package main
 
 import (
@@ -1120,24 +1116,23 @@ func main() {
 <div class="slide">
 	<h2>Uygulama: Döngüler ve Fonksiyonlar</h2>
 	<p>
-	Fonksiyonlar ve döngülerle uğraşmanın basit bir yolu olarak, Newton'un
-	metodunu kullanarak karekök fonksiyonunu yazabiliriz.
-	<p>Burada, Newton'un metodu kendisine bir <i>z</i> başlangıç 
-	noktası seçecek ve
+	Newton’ un yöntemini kullanarak karekök alma fonksiyonu gerçeklemek, fonksiyon ve döngü kullanarak alıştırma yapmanın kolay bir yoludur.
+	<p>Newton'un metodu kendisine bir <i>z</i> başlangıç 
+	noktası seçer ve
 	<div style="text-align: center">
 	<img src="https://chart.googleapis.com/chart?cht=tx&amp;chl=z=z-\frac{z^2-x}{2z}" alt="Newton's method">
-	</div> formülünü döndürerek <code>Sqrt(x)</code>'e yaklaşacak
+	</div> formülünü tekrarlayarak <code>Sqrt(x)</code> değerine yaklaşır. 
 	<p>
 	Başlangıç olarak, bu hesaplamayı 10 defa tekrar edin ve (1, 2, 3, ...) gibi çeşitli değerlerde
 	cevaba ne kadar yaklaştığınızı görün.
 	<p>
-	Daha sonra, döngü koşulunu, değer değişmeyi bıraktığında (ya da çok küçük bir delta ile değiştiğinde) 
-	duracak şekilde biçimlendirin .
+	Daha sonra, döngü koşulunu, sonuç değeri değişmeyi bıraktığında (ya da çok küçük bir delta ile değiştiğinde) 
+	Döngünün duracağı şekilde biçimlendirin.
 	Daha fazla ya da daha az yineleme için buraya göz atın.
 	<a target="_blank" href="http://golang.org/pkg/math/#Sqrt">math.Sqrt</a>'ye ne kadar yakınsınız?
 	<p>
 	İpucu: bir kayan nokta değerini (floating point value)ifade etmek ve tanımlamak için
-	kayan nokta syntax'ını verin ya da bir dönüştürme uygulayın:
+	kayan nokta söz dizimi verin ya da bir dönüştürme uygulayın:
 	<pre>z := float64(1)
 z := 1.0</pre>
 
@@ -1158,10 +1153,8 @@ func main() {
 <div class="slide">
 	<h2>Uygulama: Eşlemler</h2>
 	<p>
-	"<code>WordCount</code>"u uygulayalım. <code>s</code> dizgisinin içerisindeki
-	her &ldquo;kelime&rdquo; için bir eşlem döndürmeli. 
-	<code>wc.Test</code> fonksiyonu, bu fonksiyona karşı bir test sürüşü
-	gerçekleştirecek ve başarıyı ya da başarısızlığı çıktı olarak verecek.
+	"<code>WordCount</code>"u (KelimeSay) fonksiyonunu gerçekleyin. Fonksiyonunuz <code>s</code> dizgisinin içerisindeki her bir &ldquo;kelime&rdquo;  ve sayısını içerin bir eşlem döndürmelidir. 
+	<code>wc.Test</code> fonksiyonu, fonksiyonunuzu test edevek ve başarıyı ya da başarısızlığı çıktı olarak verecektir.
 	<p>
 	"<a target="_blank" href="http://golang.org/pkg/strings/#Fields">strings.Fields</a>"a bakmanızda fayda var.
 
@@ -1183,18 +1176,18 @@ func main() {
 <div class="slide">
 	<h2>Uygulama: Dilimler</h2>
 	<p>
-	"<code>Pic</code>"i uygulayalım.<code>dx</code>'in dilimi olan her eleman için,
-	<code>dy</code> uzunluğunda bir dilim döndürmeli.
-	8-bit işaretsiz tamsayı. Programı çalıştırdığınızda, sizin fotoğrafınızı
-	gösterecek, tamsayıları griölçekli (ee, maviölçekli) değerler olarak çıkaracak.
+	"<code>Pic</code>"i gerçekleyiniz. Fonksiyonunuz <code>dx</code>'in (8 bitlik işaretsiz tam sayılar) dilimi olan her bir eleman için,
+	<code>dy</code> uzunluğunda bir dilim döndürmelidir. /* çevirim hakkında şüphelerim var */
+	Programı çalıştırdığınızda, sizin fotoğrafınızı
+	gösterecek, tamsayıları griölçekli (*/uygun çeviri değil*/, maviölçekli) değerler olarak çıkaracaktır.
 	<p>
-	Resim seçimi size kalmış.
-	İlginç fonksiyonlar içerebilir <code>x^y</code>, <code>(x+y)/2</code> ve <code>x*y</code>.
+	Resim seçimi size ait.
+	Kullanacağınız fonksiyonlar <code>x^y</code>, <code>(x+y)/2</code> ve <code>x*y</code> ifadelerini içermektedir.
 	<p>
 	(<code>[][]uint8</code> içerisindeki her "<code>[]uint8</code>"i ayırmak için
-	döngü kullanmanız gerekebilir.)
+	döngü kullanmanız gerekmektedir.)
 	<p>
-	(Türler arasında dönüşüm uygulamak için <code>uint8(intValue)</code> kullanın.)
+	(Türler arasında dönüşüm yapmak için <code>uint8(intValue)</code> kullanın.)
 
 <pre class="source">package main
 
@@ -1211,11 +1204,11 @@ func main() {
 <div class="slide">
 	<h2>Uygulama: Fibonacci closure</h2>
 	<p>
-	Hadi fonksiyonlarla biraz oynayalım.
+	Hadi fonksiyonlarla biraz eğlenelim.
 	<p>
-	<code>Fibonacci</code> uygulaması ardışık fibonacci sayıları döndüren
-	bir fonksiyonu, kaplamı döndürür .
-
+	Fibonacci sayıları döndüren
+	bir <code>Fibonacci</code> fonksiyonu gerçekleyin.
+            /*closure kavramı sıkıntı yaratıyor Recai Hocaya danışmakta fayda var */
 <pre class="source">package main
 
 import "fmt"
@@ -1236,17 +1229,17 @@ func main() {
 <div class="slide">
 	<h2>Gelişmiş Uygulama: Karmaşık küp kökler</h2>
 	<p>
-	Hadi Go'nun kompleks sayılar için, içinde bulundurduğu <code>complex64</code> 
+	Go'nun kompleks sayılar için, içinde bulundurduğu <code>complex64</code> 
 	ve <code>complex128</code> türlerini inceleyelim .
-	Küp kökler için, Newton'un metodu:
+	Küp kökler için, Newton'un yöntemi:
 	<div style="text-align: center">
 	<img src="https://chart.googleapis.com/chart?cht=tx&amp;chl=z=z-\frac{z^3-x}{3z^2}" alt="Newton's method">
 	</div>
 	formülünü tekrarlayarak sonuca gider.
 	<p>
-	Yalnızca algoritmanın çalıştığından emin olmak için, 2'nin küp kökünü bulun.
+	Algoritmanın çalıştığından emin olmak için, 2'nin küp kökünü bulun.
 	<code>math/cmplx</code> paketinin içinde bir <a target="_blank" href="http://golang.org/pkg/math/cmplx/#Pow">Pow</a>
-	fonksiyonu var.
+	fonksiyonu bulunmaktadır.
 
 <pre class="source">package main
 
@@ -1269,11 +1262,11 @@ func main() {
 
 <div class="slide">
 	<h2>Metodlar</h2>
-	<p>
-	Go'nun sınıfları yok. Buna rağmen, "struct" türlerinde metod tanımlayabilirsiniz.
+	<p>http://tour.golang.org/ - 52
+	Go dilinde sınıf yapısı bulunmamasına karşın "struct" türlerinde metod tanımlayabilirsiniz.
 	<p>
 	<i>Metod alıcısı</i>, <code>func</code> anahtar sözcüğü ve metod ismi arasında
-	kendi argüman listesinde belirir.
+	kendi argüman listesinde bulunur.
 <pre class="source">package main
 
 import (
@@ -1298,11 +1291,11 @@ func main() {
 <div class="slide">
 	<h2>Metodlar</h2>
 	<p>
-	Hatta, metodunuzu paketinizde tanımladığını <i>herhangi</i> bir türde
-	tanımlayabilirsiniz, sadece "struct"larda değil.
+	Hatta sadece "struct"larda değil, metodunuzu paketinizde tanımladığınız <i>herhangi</i> bir türde de
+	tanımlayabilirsiniz.
 	<p>
-	Başka bir paketten alacağınız bir türde metod tanımlayamazsınız,
-	ya da temel bir türde.
+	Başka bir paketten alacağınız bir türde ya da temel bir türde metod tanımlayamazsınız,
+	.
 <pre class="source">package main
 
 import (
@@ -1328,28 +1321,28 @@ func main() {
 <div class="slide">
 	<h2>İşaretçi alıcılarıyla metodlar</h2>
 	<p>
-	Metodlar isimlendirilmiş türlerle ya da işaretçilerle yönlendirilmiş,
-	isimlendirilmiş türlerle ilişkilendirilebilir.
+	Metodlar isimlendirilmiş türlerle ya da
+	Isimlendirilmiş bir türü gösteren işaretçilerle ilişkilendirilebilir.
 	<p>
-	Henüz şimdi iki tane <code>Abs</code> metodu gördük. Birisi
-	<code>*Vertex</code>'de işaretçi türünde ve diğeri
-	<code>MyFloat</code>'da değer türünde.
+	Henüz, biri
+	<code>*Vertex</code> işaretçi türünde ve diğeri ise
+	<code>MyFloat</code> değer türünde olmak üzere iki <code>Abs</code> metodu gördük.
 	<p>
 	İşaretçi alıcısı kullanmanın iki nedeni var.
-	Birincisi, metod her çağrıldığında değeri kopyalamasını önlemek için 
-	(eğer türü "large struct" ise daha verimli). İkincisi, bu sayede metod
-	işaretçiler sayesinde değeri güncelleyebilir.
+	Birincisi, her metod çağrısında, değer kopyalamasından kaçınmak
+	(eğer türü "large struct" ise daha verimli). İkincisi, metodun
+	işaretçiler sayesinde değeri güncelleyebimesidir.
 	<p>
 	<code>*Vertex</code> yerine <code>Vertex</code>'i alıcı olarak kullanmak için
 	<code>Abs</code> ve <code>Scale</code> metod ifadelerini değiştirmeyi deneyin.
 	<p>
 	<code>v</code> bir <code>Vertex</code> olduğunda, <code>Scale</code>
-	metodunun bir etkisi kalmaz. <code>Scale</code>, <code>v</code>'yi değişime uğratır.
+	Metodunun bir işlevi yoktur. <code>Scale</code>, <code>v</code>'yi dönüştürür.
 	<code>v</code> bir değer olduğunda (işaretçi-değil), metod onu <code>Vertex</code>'in
-	bir kopyası olarak görecek ve asıl değeri değiştirmeyecektir.
+	bir kopyası olarak görecek ve asıl değeri dönüştürmeyecektir.
 	<p>
-	<code>Abs</code> diğer türlü de çalışır. Yalnızca <code>v</code>'yi okur.
-	Asıl ifadeyi okumasıyla kopyalanmış ifadeyi okuması (işaretçi vasıtasıyla)
+	<code>Abs</code> diğer bir şekilde de çalışır. Yalnızca <code>v</code>'yi okur.
+	Burada asıl ifadeyi okumasıyla kopyalanmış ifadeyi okuması (işaretçi vasıtasıyla)
 	arasında bir fark yoktur.
 <pre class="source">package main
 
@@ -1384,7 +1377,7 @@ func main() {
 	Bir arayüz("interface") türü bir dizi metod tarafından belirlenir.
 	<p>
 	Arayüz türünün herhangi bir değeri metodarı gerçekleyen
-	değerlerden birini tutabilir.
+	değerlerden herhangi birini tutabilir.
 
 <pre class="source">package main
 
@@ -1431,18 +1424,18 @@ func (v *Vertex) Abs() float64 {
 <div class="slide">
 	<h2>Arayüzler</h2>
 	<p>
-	Bir tür metodları tamamlayarak, arayüzleri de tamamlar.
+	Bir tür, arayüzü, gerçeklenen metodları kullanarak gerçekler. /* çok kötü bir çeviri oldu üzerind düşünmek gerek */
 	<p>
-	<i>Niyetin aşikar bir açıklaması yoktur.</i>
+	<i>Niyetin aşikar bir açıklaması yoktur.</i> /* bu çeviriyi uygun bulmamakla birlikte daha düzgün bir çeviri önerisi sunamıyorum */
 	<p>
-	Örtük arayüzler, uygulama paketlerini arayüzlerin tanımlandığı 
+	Soyutlanmış arayüzler, uygulama paketlerini arayüzlerin tanımlandığı 
 	paketlerden ayırırlar: birbirlerine bağlı da değillerdir.
 	<p>
-	Aynı zamanda açık arayüzlerin tanımlanması için teşvik eder, çünkü
-	her uygulamayı tek tek bulup yeni bir arayüz ismiyle etiketlemek zorunda değilsiniz.
+	Aynı zamanda –doğru terimi bulamadım- arayüzlerin tanımlanması için teşvik eder, çünkü
+	her uygulamayı tek tek bulup yeni bir arayüz ismiyle etiketlemek zorunluluğunu ortadan kaldırır.
 	<p>
-	<a target="_blank" href="http://golang.org/pkg/io/">Package io</a>, "<code>Reader</code>" ve "<code>Writer</code>"ı tanımlar
-	sizin yapmanıza gerek yok.
+	<a target="_blank" href="http://golang.org/pkg/io/">Package io</a>, "<code>Reader</code>" ve "<code>Writer</code>"ı otomatik olarak tanımlar.
+	
 <pre class="source">package main
 
 import (
@@ -1477,15 +1470,15 @@ func main() {
 	<h2>Hatalar</h2>
 	<p>
 	Kendini hata dizgisi olarak tarif edebilen her şey bir "hata"dır.
-	Bu fikir önceden tasarlanmış, yapısal arayüz türünde, <code>error</code>'da,
-	kendi tekil metoduyla, <code>Error</code>, saklanır, bir dizgi döndürür:
+	Bu fikir önceden tasarlanmış, yerleşik arayüz türünde, <code>error</code>'da,
+	dizgi döndüren, kendi tekil metoduyla (<code>Error</code>) saklanır,:
 	<pre>type error interface {
 	Error() string
 }</pre>
 
 	<p>
 	"<code>fmt</code>" paketlerinin kendi çıktı türleri bir "<code>error</code>"
-	çıktısı istendiğinde onu nasıl sunacaklarını otomatik olarak bilirler.
+	çıktısı istendiğinde onu nasıl sunacaklarını otomatik olarak bilir.
 
 <pre class="source">package main
 
@@ -1521,8 +1514,7 @@ func main() {
 <div class="slide">
 	<h2>Web sunucuları</h2>
 	<p>
-	<a target="_blank" href="http://golang.org/pkg/net/http/">http paketi</a> uygulanabilir değerleri kullanarak
-	HTTP isteklerini sunar <code>http.Handler</code>:
+	<a target="_blank" href="http://golang.org/pkg/net/http/">http paketi</a> HTTP isteklerini, <code>http.Handler</code>’ ı gerçekleyen değerleri kullanarak karşılar:
 	<pre>package http
 
 type Handler interface {
@@ -1536,7 +1528,7 @@ type Handler interface {
 	</span>
 	<span class="appengineMode">
 	<b>Not:</b> Bu örnek web-tabanlı kullanıcı arayüzünde çalışmayacaktır.
-	Web sunucuları yazmayı denemek için <a target="_blank" href="http://golang.org/doc/install/"> Go yüklemek
+	Web sunucusu yazmayı denemek için <a target="_blank" href="http://golang.org/doc/install/"> Go yüklemek
 	isteyebilirsiniz</a>.
 	</span>
 <pre class="source">package main
@@ -1563,7 +1555,7 @@ func main() {
 <div class="slide">
 	<h2>Görüntüler</h2>
 	<p>
-	<a target="_blank" href="http://golang.org/pkg/image/#Image">"Image" paketi</a>, <code>Görüntü</code> arayüzünü
+	<a target="_blank" href="http://golang.org/pkg/image/#Image">"Image" paketi</a>, <code>image</code> arayüzünü
 	tanımlar:
 	<pre>package image
 
@@ -1576,7 +1568,7 @@ type Image interface {
 	(Detaylar için <a target="_blank" href="http://golang.org/pkg/image/#Image"> bu dokümana</a> göz atın.
 	<p>
 	
-	Ayrıca, <code>color.Color</code> ve <code>color.Model</code> birer arayüzdür ama 
+	Ayrıca, <code>color.Color</code> ve <code>color.Model</code> da birer arayüzdür ancak 
 	<code>color.RGBA</code> ve <code>color.RGBAModel</code> öntanımlı uygulamaları için
 	bunu görmezden geleceğiz.
 
@@ -1598,10 +1590,10 @@ func main() {
 	<h2>Uygulama: Hatalar</h2>
 	<p>
 	<code>Sqrt</code> fonksiyonunuzu önceki egzersizlerden kopyalayın ve onu bir
-	<code>error</code> değerine çevirin.
+	<code>error</code> (hata) değeri döndürecek şekilde düzenleyin.
 	<p>
-	<code>Sqrt</code> negatif bir sayı verildiğinde nil olamayan bir
-	hata mesajı döndürmelidir, tıpkı kompleks sayıları desteklemediğinde yapacağı gibi.
+	<code>Sqrt</code> fonksiyonunuz negatif bir sayı verildiğinde, tıpkı kompleks sayıları desteklemediğinde yapacağı gibi. nil olamayan bir
+	hata mesajı döndürmelidir, 
 	<p>
 	Yeni bir tür oluşturun
 	<pre>type ErrNegativeSqrt float64</pre>
@@ -1620,6 +1612,7 @@ func main() {
 	<p>
 	<code>Sqrt</code> fonksiyonunuzu negatif sayı verildiğinde
 	<code>ErrNegativeSqrt</code> döndürecek biçimde değiştirin.
+
 <pre class="source">package main
 
 import (
@@ -1668,21 +1661,21 @@ func main() {
 	<h2>Uygulama: Görüntüler</h2>
 	<p>
 	Daha önceden yazdığınız görüntü vericiyi hatırladınız mı?
-	Hadi bir tane daha yazalım ama bu defa bir dilim veri döndürmek yerine
+	Hadi bir tane daha yazalım ama bu defa bir veri dilimi döndürmek yerine
 	<code>image.Image</code> döndürsün.
 	<p>
 	Kendi <code>Image</code> türünüzü tanımlayın, 
 	<a href="http://golang.org/pkg/image/#Image" target="_blank">gerekli metodları</a>,
-	tamamlayın ve "<code>pic.ShowImage</code>"i çağırın.
+	Gerçekleyin ve "<code>pic.ShowImage</code>"i çağırın.
 	<p>
 	<code>Bounds</code>, <code>image.Rect(0, 0, w, h)</code> gibi bir
-	<code>image.Rectangle</code> döndürmeli.
+	<code>image.Rectangle</code> döndürmelidir.
 	<p>
 	<code>ColorModel</code>, <code>color.RGBAModel</code> döndürmeli.
 	<p>
-	<code>At</code> bir renk döndürmeli;
+	<code>At</code> bir renk döndürmelidir;
 	son görüntü vericideki <code>v</code> değeri bu defa
-	<code>color.RGBA{v, v, 255, 255}</code>'e tekabül etmeli.
+	<code>color.RGBA{v, v, 255, 255}</code>'e tekabül etmelidir.
 
 <pre class="source">package main
 
@@ -1702,9 +1695,9 @@ func main() {
 <div class="slide">
 	<h2>Uygulama: Rot13 Okuyucu</h2>
 	<p>
-	Bilindik modellerden biri
-	<a target="_blank" href="http://golang.org/pkg/io/#Reader">io.Reader</a>'dır, 
-	başka bir <code>io.Reader</code>'ı sarar, bir şekilde akımı düzenler.
+	Bilindik modellerden biri, bit 
+	<a target="_blank" href="http://golang.org/pkg/io/#Reader">io.Reader</a>’ ın, 
+	başka bir <code>io.Reader</code>' ı sarıp, bir şekilde akışı düzenlemesidir. /* %100 emin değilim wrap ve stream terimlerine tekrar göz atmak lazım*/
 	<p>
 	Örneğin, 
 	<a target="_blank" href="http://golang.org/pkg/compress/gzip/#NewReader">gzip.NewReader</a>
@@ -1716,8 +1709,8 @@ func main() {
 	<code>io.Reader</code>'dan okuyup yine <code>io.Reader</code>'a yazan bir <code>rot13Reader</code>'ı, 
 	veri akışını düzenleyerek uygulayın.
 	<p>
-	<code>rot13Reader</code> türü sizin için tahsis edildi.  <code>Read</code> metodunu
-	kullanarak onu bir <code>io.Reader</code> yapın.
+	<code>rot13Reader</code>türünü kullanabilirsiniz.  <code>Read</code> metodunu
+	kullanarak onu bir <code>io.Reader</code> haline getirin.
 <pre class="source">package main
 
 import (
@@ -1836,11 +1829,11 @@ func main() {
 <pre>ch := make(chan int, 100)</pre>
 
 	<p>
-	Kodu, bloğu yalnızca tampon dolu olduğunda tamponlanmış kanala gönderir.
-	Tampon boş olduğunda ise bloğu temin eder.
+	Kodu, bloğu yalnızca tampon dolu olduğunda tamponlanmış kanala gönderir. /* daha düzgün bir çeviri önerim yok ancak üzerinde çalışmamız gerek */
+	Tampon boş olduğunda ise bloğu temin eder. /* daha düzgün bir çeviri önerim yok ancak üzerinde çalışmamız gerek */
 
 	<p>
-	Örneği tamponu gereğinden fazla olacak şekilde düzenleyip, ne olduğunu gözlemleyin.
+	Örneği, tampon gereğinden fazla dolacak şekilde düzenleyip, ne olduğunu gözlemleyin.
 
 <pre class="source">package main
 
@@ -1859,14 +1852,13 @@ func main() {
 	<h2>Range and Close</h2>
 	<p>
 	Gönderici bir kanalı daha fazla değer alınmaması gerektiğinde 
-	<code>close</code> edebilir (kapatabilir). Alıcılar, alıcı ifadeye ikinci bir parametre ataması yaparak
+	<code>close</code> kodu ile kapatabilir. Alıcılar, alıcı ifadeye ikinci bir parametre ataması yaparak
 	kanalın kapalı olup olmadığını öğrenebilir:
 	<pre>v, ok := &lt;-ch</pre>
 	<p>
-	Eğer alınacak başka değer kalmamış ve kanal kapatılmışsa <code>ok</code>, <code>false</code> olacaktır.
+	Eğer alınacak başka değer kalmamış ve kanal kapatılmışsa <code>ok</code>, <code>false</code> değerini alacaktır.
 	<p>
-	<code>for i := range c</code> döngüsü değerleri kanaldan tekrar tekrar alır
-	ta ki kanal kapanana kadar.
+	<code>for i := range c</code> döngüsü değerleri kanaldan kanal kapanana kadar düzenli olarak alır.
 	<p>
 	<b>Not:</b> Yalnızca gönderen kanalı kapatmalıdır, alıcı asla kapatmamalıdır.
 	Kapalı kanala bir şeyler göndermek paniğe yol açabilir.
@@ -1905,7 +1897,7 @@ func main() {
 	izin verir.
 	<p>
 	Bir <code>select</code> "case"lerinden biri çalıştırılabilene kadar tıkalıdır, uygun duruma geldiğinde
-	"case"i çalıştırır.  Eğer birden fazla çalıştırılabilir "case" varsa rastgele seçer.
+	"case"i çalıştırır.  Eğer birden fazla çalıştırılabilir "case" varsa seçimi rastgele gerçekleştirir.
 <pre class="source">package main
 
 import "fmt"
@@ -1939,7 +1931,7 @@ func main() {
 <div class="slide">
 	<h2>Varsayılan Seçim</h2>
 	<p>
-	"<code>default</code> case"i, "<code>select</code>"in içerisindedir
+	"<code>default</code> “case” i, "<code>select</code>" in içerisindedir
 	eğer hazırda başka case yoksa çalıştırılır.
 	<p>
 	"<code>default</code> case"i bloklama yapmadan alma ya da gönderme yapmak için
@@ -1953,7 +1945,7 @@ default:
 	<p>
 	<span class="appengineMode">
 	<b>Not:</b> Bu örnek web-tabanlı kullanıcı arayüzünde çalışmaz çünkü 
-	"sandbox" envanterinde zamanın bir konsepti yoktur. Bunun için
+	"sandbox" envanterinde herhangi bir zaman konsepti yoktur. Bunun için
 	<a target="_blank" href="http://golang.org/doc/install/">Go yüklemek</a>
 	isteyebilirsiniz.
 	</span>
@@ -1990,7 +1982,7 @@ func main() {
 	1, 1, 2, 3, 5, 8, 13.
 	<img src="static/fig4.png" alt="binary trees">
 	<p>
-	Aynı sırada iki binary apacı olup olmadığını kontrol eden fonksiyon bir çok dilde 
+	Bir çok dilde, aynı sırada iki binary ağacı olup olmadığını kontrol eden fonksiyon bir fonksiyon gerçeklemek
 	bir hayli karışıktır. Daha basit bir çözüm sunabilmek adına Go'nun
 	eşzamanlılığını ve kanallarını kullanacağız.
 	<p>
@@ -2017,7 +2009,7 @@ func main() {
 	<code>ch</code> adında bir kanal oluşturun ve walker'ı dışarı atın:
 	<pre>go Walk(tree.New(1), ch)</pre>
 	<p>
-	Daha sonra kanaldan 10 değeri okuyun ve yazın.
+	Daha sonra kanaldan 10 değerini okuyun ve yazın.
 	Değerler 1, 2, 3, ..., 10 olmalı.
 	<p>
 	<b>3.</b> <code>t1</code> ve <code>t2</code>'nin aynı değeri saklamasına karşın
@@ -2026,7 +2018,7 @@ func main() {
 	<b>4.</b> <code>Same</code> fonksiyonunu test edin.
 	<p>
 	<code>Same(tree.New(1), tree.New(1))</code> true döndürmeli ve
-	<code>Same(tree.New(1), tree.New(2))</code> false döndürmeli.
+	<code>Same(tree.New(1), tree.New(2))</code> false döndürmelidir.
 
 <pre class="source">package main
 
@@ -2151,8 +2143,8 @@ var fetcher = &amp;fakeFetcher{
 	<span class="localMode"> </span>
 	<a target="_blank" href="http://golang.org/doc/">Go Dokümantasyonu</a> 
 	<span class="localMode">başlangıca</span>
-	<span class="appengineMode">devam etmek için</span> çok güzel bir yer.
-	Kaynakları, eğitimi, videoları, ve fazlasını içinde bulunduruyor.
+	<span class="appengineMode">devam etmek için</span> çok güzel olacaktır.
+	Bu dökümanda Kaynakları, eğitimi, videoları, ve fazlasını bulabilirsiniz.
 	<p>
 	Standart kütüphane ile ilgili yardıma ihtiyacınız olursa,
 	<a target="_blank" href="http://golang.org/pkg/">kaynak pakete</a> bir göz atın.
@@ -2163,10 +2155,10 @@ var fetcher = &amp;fakeFetcher{
 	<a target="_blank" href="http://golang.org/doc/codewalk/sharemem/">İletişimde Paylaşılan Hafıza</a>'ya göz atın.
 	<p>
 	<a target="_blank" href="http://golang.org/doc/codewalk/functions/">Go'da Birinci Sınıf Fonksiyonlar</a>
-	Go'nun fonksiyon türleri hakkında ilginç bir bakış açısı sunacak.
+	Go'nun fonksiyon türleri hakkında ilginç bir bakış açısı sunacaktır.
 	<p>
 	<a target="_blank" href="http://blog.golang.org/">Go Blog</a> Go makaleleriyle alakalı
-	büyük bir arşive sahip.
+	büyük bir arşive sahiptir.
 	<p>
 	Daha fazlası için <a target="_blank" href="http://golang.org">golang.org</a>'u ziyaret edin.
 </div>
